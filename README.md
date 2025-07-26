@@ -1,54 +1,166 @@
-# React + TypeScript + Vite
+<h1 align="center">🌪️ Vortex 🌪️</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  Es un starter template moderno para aplicaciones React basado en Vite + TypeScript con las mejores prácticas y listo para producción.
+</p>
 
-Currently, two official plugins are available:
+## ¿Qué incluye este template?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⚡️ **React 19** con las últimas características y **TypeScript 5** para desarrollo type-safe.
 
-## Expanding the ESLint configuration
+🚀 **Vite 7** como build tool ultra-rápido con Hot Module Replacement (HMR) instantáneo.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+👷 **SWC** para compilación y Fast Refresh optimizados, sin Babel.
+
+🎨 **Tailwind CSS v4** integrado con plugin de Vite para estilos modernos y responsive.
+
+💅 **Prettier** con **prettier-plugin-tailwindcss** para formateo automático y ordenamiento de clases Tailwind CSS.
+
+🐶 **Husky** integrado para mantener calidad de código y convenciones durante el desarrollo:
+
+- 💅 Ejecuta el linter sobre archivos modificados
+- 💬 Conventional commits para mantener historial limpio
+- ⚙️ Verificación automática de errores de TypeScript
+- 🎨 Formateo automático de código y clases Tailwind
+
+🔧 **ESLint** moderno con reglas específicas para React:
+
+- React Hooks rules para mejores prácticas
+- React Refresh para desarrollo óptimo
+- TypeScript-ESLint para análisis estático avanzado
+
+🐦‍🔥 **Módulos ES nativos** siguiendo el estándar moderno de JavaScript.
+
+📌 **Rutas personalizadas** con path aliases - usa `@/components/Button` en lugar de `../../../src/components/Button`.
+
+📦 **pnpm** como gestor de paquetes para instalaciones más rápidas y eficientes.
+
+🎯 **TypeScript estricto** con configuración optimizada para aplicaciones React modernas.
+
+🌐 **Configuración dual de TypeScript** separando configuración de app y herramientas de desarrollo.
+
+## Características
+
+- **React 19** con TypeScript 5 y importaciones absolutas
+- **Vite 7** para desarrollo ultra-rápido y builds optimizados
+- **Tailwind CSS v4** con plugin oficial de Vite para mejor rendimiento
+- **SWC** para compilación rápida sin overhead de Babel
+- **ESLint moderno** con reglas específicas para React y TypeScript
+- **Prettier + prettier-plugin-tailwindcss** para formateo automático y ordenamiento de clases Tailwind
+- **Husky + Commitlint** para conventional commits y calidad de código
+- **Hot Module Replacement** instantáneo para desarrollo fluido
+- **Path aliases** para importaciones limpias y mantenibles
+
+## Requisitos previos
+
+Antes de comenzar, asegúrate de tener instalado:
+
+- **Node.js** v18 o superior - [Descargar Node.js](https://nodejs.org/)
+- **pnpm** (recomendado) o **npm** - Gestor de paquetes
+  ```bash
+  npm install -g pnpm
+  ```
+- **Git** - Para control de versiones y hooks de Husky
+
+### ¿Por qué pnpm?
+
+Aunque este template es **100% compatible con npm**, recomendamos pnpm por:
+
+- **⚡ Velocidad**: Instalaciones hasta 2x más rápidas
+- **💾 Espacio**: Usa symlinks, ahorrando gigabytes de espacio en disco
+- **🔒 Seguridad**: Mejor resolución de dependencias y menos vulnerabilidades
+- **🎯 Eficiencia**: Caché global compartido entre proyectos
+
+## Getting started
+
+Utiliza este repositorio como [GitHub template](https://github.com/SyntaxSquadOf/Vortex/generate) o usa [degit](https://github.com/Rich-Harris/degit) para clonarlo en tu máquina con un historial git vacío:
+
+```bash
+npx degit SyntaxSquadOf/Vortex#main my-react-app
+```
+
+o
+
+```bash
+pnpm dlx degit SyntaxSquadOf/Vortex#main my-react-app
+```
+
+### Con pnpm (recomendado):
+
+```bash
+cd my-react-app
+pnpm install
+pnpm dev
+```
+
+### Con npm:
+
+```bash
+cd my-react-app
+npm install
+npm run dev
+```
+
+¡Tu aplicación estará ejecutándose en `http://localhost:5173`! 🎉
+
+## Scripts
+
+**Con pnpm:**
+
+- `pnpm dev` - inicia servidor de desarrollo con HMR en puerto 5173
+- `pnpm build` - compila TypeScript y construye para producción con Vite
+- `pnpm preview` - previsualiza localmente la build de producción
+- `pnpm lint` - ejecuta ESLint en todos los archivos del proyecto
+- `pnpm format` - formatea código y clases Tailwind con Prettier
+- `pnpm prepare` - inicializa Husky y configura git hooks automáticamente
+
+**Con npm (equivalentes):**
+
+- `npm run dev`, `npm run build`, `npm run preview`, `npm run lint`, `npm run format`, `npm run prepare`
+
+<!-- ## Estructura del proyecto
+
+```
+src/
+├── components/          # Componentes reutilizables
+├── assets/             # Imágenes, iconos, etc.
+├── App.tsx            # Componente principal
+├── App.css           # Estilos del componente principal
+├── main.tsx          # Punto de entrada de la aplicación
+├── index.css         # Estilos globales
+└── vite-env.d.ts     # Tipos de Vite
+``` -->
+
+<!-- ## Configuración avanzada
+
+### ESLint para producción
+
+Para aplicaciones de producción, recomendamos habilitar reglas type-aware más estrictas en `eslint.config.js`:
 
 ```js
 export default tseslint.config({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
     ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
+    // O para reglas más estrictas:
     ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
-    // other options...
     parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
       tsconfigRootDir: import.meta.dirname,
     },
   },
-})
+});
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Tailwind CSS
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Tailwind está configurado con el plugin oficial de Vite para mejor rendimiento. Puedes personalizar tu configuración en los archivos de Tailwind según tus necesidades.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Prettier + Tailwind CSS
+
+El proyecto incluye **prettier-plugin-tailwindcss** que automáticamente:
+
+- **Ordena las clases Tailwind** según el orden recomendado oficial
+- **Formatea el código** manteniendo consistencia en todo el proyecto
+- **Detecta conflictos** de clases y los resuelve automáticamente -->
