@@ -118,18 +118,28 @@ npm run dev
 
 - `npm run dev`, `npm run build`, `npm run preview`, `npm run lint`, `npm run format`, `npm run prepare`
 
-<!-- ## Estructura del proyecto
+## Estructura del proyecto
 
 ```
 src/
-├── components/          # Componentes reutilizables
-├── assets/             # Imágenes, iconos, etc.
-├── App.tsx            # Componente principal
-├── App.css           # Estilos del componente principal
-├── main.tsx          # Punto de entrada de la aplicación
-├── index.css         # Estilos globales
-└── vite-env.d.ts     # Tipos de Vite
-``` -->
+├── components/          # Componentes reutilizables (botones, inputs, layouts, etc.)
+├── context/             # Contextos de React (Auth, Theme, etc.)
+├── assets/              # Imágenes, iconos, fuentes, etc.
+├── hooks/               # Custom hooks de React
+├── pages/               # Vistas principales o páginas (si usas routing)
+├── utils/               # Utilidades y helpers
+├── services/            # Lógica de acceso a APIs o servicios externos
+├── App.tsx              # Componente principal de la app
+├── App.css              # Estilos del componente principal
+├── main.tsx             # Punto de entrada de la aplicación
+├── index.css            # Estilos globales
+└── vite-env.d.ts        # Tipos de Vite
+public/
+├── vite.svg             # Logo de Vite u otros recursos públicos
+```
+
+> **ℹ️ Nota:**  
+> La estructura de carpetas sugerida es solo una guía inicial y no es restrictiva. Siéntete libre de modificar, eliminar o agregar carpetas y archivos según las necesidades de tu proyecto. Adapta la organización a tu propio flujo de trabajo y preferencias.
 
 <!-- ## Configuración avanzada
 
