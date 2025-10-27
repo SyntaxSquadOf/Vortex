@@ -138,8 +138,10 @@ public/
 ├── vite.svg             # Logo de Vite u otros recursos públicos
 ```
 
-> **ℹ️ Nota:**  
-> La estructura de carpetas sugerida es solo una guía inicial y no es restrictiva. Siéntete libre de modificar, eliminar o agregar carpetas y archivos según las necesidades de tu proyecto. Adapta la organización a tu propio flujo de trabajo y preferencias.
+> **ℹ️ Nota:**
+>
+> - La estructura de carpetas sugerida es solo una guía inicial y no es restrictiva. Siéntete libre de modificar, eliminar o agregar carpetas y archivos según las necesidades de tu proyecto. Adapta la organización a tu propio flujo de trabajo y preferencias.
+> - Este template **no incluye `pnpm-lock.yaml`** intencionalmente para que siempre obtengas las últimas versiones compatibles de las dependencias al instalar. Despues de clonar, instalar modificar el gitignore para que te tracke el pnpm-lock.yaml
 
 <!-- ## Configuración avanzada
 

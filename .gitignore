@@ -14,7 +14,7 @@ dist-ssr
 
 .env
 
-# Build directories
+# Lock files (template generates fresh ones)
 pnpm-lock.yaml
 
 # Editor directories and files
