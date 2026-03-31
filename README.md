@@ -8,7 +8,7 @@
 
 ⚡️ **React 19** con las últimas características y **TypeScript 5** para desarrollo type-safe.
 
-🚀 **Vite 7** como build tool ultra-rápido con Hot Module Replacement (HMR) instantáneo.
+🚀 **Vite 8** como build tool ultra-rápido con Hot Module Replacement (HMR) instantáneo.
 
 👷 **SWC** para compilación y Fast Refresh optimizados, sin Babel.
 
@@ -42,7 +42,7 @@
 ## Características
 
 - **React 19** con TypeScript 5 y importaciones absolutas
-- **Vite 7** para desarrollo ultra-rápido y builds optimizados
+- **Vite 8** para desarrollo ultra-rápido y builds optimizados
 - **Tailwind CSS v4** con plugin oficial de Vite para mejor rendimiento
 - **SWC** para compilación rápida sin overhead de Babel
 - **ESLint moderno** con reglas específicas para React y TypeScript
